@@ -36,7 +36,7 @@ void handle_request(int nfd) {        //This is the same Function from Lab 7, I 
 }
 
 void handle_request_http(int nfd){      //My Handle Request Function for the GET HTTP Protocol (I Changed run_service to use this Function)
-   FILE *network = fdopen(nfd, "r");    //Open File Stream for Reading
+   FILE *network = fdopen(nfd, "r+");   //Open File Stream for Reading
    char *line = NULL;                   //line Pointer Initialized to NULL
    size_t size;                         //size Variable for getline
    ssize_t num;                         //num Variable for getline use
